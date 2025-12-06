@@ -36,7 +36,7 @@ app.post('/query', async (c) => {
         await stream.write(text);
       }
     }
-  });
+  })
 });
 
 
