@@ -20,7 +20,7 @@ app.get('/', (c) => {
 //query route
 app.route("/", query)
 //webhook route
-app.route("/webhook", webhook)
+app.route("/", webhook)
 
 serve({
   fetch: app.fetch,
