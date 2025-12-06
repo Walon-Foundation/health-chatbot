@@ -1,6 +1,6 @@
 import { extractTextFromDocx } from "./doc-reader.js";
 import { splitText } from "./doc-splitter.js";
-import { getEmbedding } from "../config/openRouter.js";
+import { getEmbedding } from "../config/openai.js";
 import { pineconeIndex } from "../config/pinecone.js";
 import { nanoid } from "nanoid";
 
@@ -29,4 +29,4 @@ async function ingestDocx(filepath:string){
 }
 
 
-ingestDocx("src/configs/data/JULIE.docx")
+ingestDocx("src/data/health_rag_1000_qa.docx")

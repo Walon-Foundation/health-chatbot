@@ -4,6 +4,7 @@ import { logger } from 'hono/logger'
 import { secureHeaders } from 'hono/secure-headers'
 
 import query from "./routes/query.js"
+import webhook from "./routes/webhook.js"
 
 
 const app = new Hono().basePath("/api/v1/")
@@ -19,11 +20,11 @@ app.get('/', (c) => {
 //query route
 app.route("/", query)
 //webhook route
-// app.post("/webhook", webhook)
+app.route("/webhook", webhook)
 
 serve({
   fetch: app.fetch,
-  port: 3000
+  port: 5000
 }, (info) => {
   console.log(`Server is running on http://localhost:${info.port}`)
 })

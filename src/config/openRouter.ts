@@ -6,24 +6,16 @@ const openRouter = new OpenRouter({
 });
 
 
-export async function getEmbedding(text: string): Promise<number[]> {
-  const response = await openRouter.embeddings.generate({
-    model: 'openai/text-embedding-3-small',
-    input: text,
-  });
-
-  return response.data[0].embedding as number[];
-}
 
 
 export async function generateAnswerStream(question: string, context: string) {
   const response = await openRouter.chat.send({
-    model: 'openai/gpt-oss-20b:free',
+    model: 'nvidia/nemotron-nano-12b-v2-vl:free',
     stream: true,
     messages: [
       {
         role: 'system',
-        content: 'You are a helpful assistant. Use the context to answer the question, and just send the answer — no extra explanation.',
+        content: "You are a helpful assistant. Use the context to answer the question, and just send the answer — no extra explanation, also don't start the answer with the context say, be professional you is a medical bot ",
       },
       {
         role: 'user',
@@ -34,15 +26,3 @@ export async function generateAnswerStream(question: string, context: string) {
 
   return response; // async iterable!
 }
-
-
-await openRouter.chat.send({
-  model: 'openai/gpt-4o',
-  messages: [
-    {
-      role: 'user',
-      content: 'What is the meaning of life?',
-    },
-  ],
-  stream: false,
-});
