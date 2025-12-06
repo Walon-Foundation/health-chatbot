@@ -1,5 +1,6 @@
 import { Hono } from 'hono';
-import { getEmbedding, generateAnswerStream } from "../config/openRouter.js";
+import { generateAnswerStream } from "../config/openRouter.js";
+import { getEmbedding } from '../config/openai.js';
 import { pineconeIndex } from "../config/pinecone.js";
 
 const app = new Hono();
