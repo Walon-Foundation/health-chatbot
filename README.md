@@ -10,7 +10,7 @@ A healthcare-focused RAG (Retrieval-Augmented Generation) chatbot built with Typ
 - 💾 **Persistent Storage**: PostgreSQL database with Drizzle ORM for data management
 - 🔐 **Secure**: Security headers, environment validation, and API key management
 - 🌐 **REST API**: Clean REST API built with Hono framework
-- 📱 **Webhook Support**: WhatsApp integration via Whapi for multi-channel access
+- 📱 **Webhook Support**: WhatsApp integration via Wasenderapi for multi-channel access
 - 🔄 **Document Ingestion**: CLI tool for importing healthcare documents into the vector database
 
 ## Tech Stack
@@ -22,7 +22,7 @@ A healthcare-focused RAG (Retrieval-Augmented Generation) chatbot built with Typ
 - **AI Models**: OpenAI & OpenRouter APIs
 - **Document Processing**: Mammoth for .docx extraction
 - **Validation**: Zod for runtime schema validation
-- **Messaging**: WhatsApp integration via Whapi
+- **Messaging**: WhatsApp integration via Wasenderapi
 
 ## Quick Start
 
@@ -35,7 +35,7 @@ A healthcare-focused RAG (Retrieval-Augmented Generation) chatbot built with Typ
   - OpenAI
   - OpenRouter
   - Pinecone
-  - Whapi (for WhatsApp integration)
+  - Wasenderapi (for WhatsApp integration)
 
 ### Installation
 
@@ -163,7 +163,7 @@ OPENAI_API_KEY=your_openai_key
 OPENROUTER_API_KEY=your_openrouter_key
 
 # WhatsApp Integration
-WHAPI_API_KEY=your_whapi_key
+WASENDERAPI_API_KEY=your_wasenderapi_key
 ```
 
 ## Development Scripts
@@ -178,6 +178,27 @@ WHAPI_API_KEY=your_whapi_key
 | `pnpm db:push` | Apply migrations to database |
 | `pnpm db:migrate` | Run pending migrations |
 | `pnpm db:studio` | Open Drizzle Studio dashboard |
+
+## Testing the Bot
+
+### Development Testing
+Once the server is running and configured locally, you can test the Health Chatbot via WhatsApp:
+
+1. **Send a message** to: **[WHATSAPP_BOT_NUMBER_PLACEHOLDER]**
+2. **Type your health query**, for example:
+   - "What are the symptoms of diabetes?"
+   - "How can I reduce high blood pressure?"
+   - "What are the side effects of common pain relievers?"
+3. **Wait for the response** - The bot will search through your ingested healthcare documents and provide an AI-powered response
+
+**Note**: Make sure your bot number is properly configured in your Wasenderapi dashboard and the webhook is receiving messages correctly.
+
+### Production Bot
+To test the production bot that's currently live, send a WhatsApp message to:
+
+**[PRODUCTION_BOT_NUMBER_PLACEHOLDER]**
+
+The production instance is running with optimized settings and ingested healthcare documents. You can ask any health-related questions and receive AI-powered responses based on the knowledge base.
 
 ## Security
 

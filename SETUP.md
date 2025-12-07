@@ -63,8 +63,8 @@ touch .env.local
 2. Create a new index (e.g., `health-chatbot`)
 3. Copy your API key and index name to `.env.local`
 
-#### Whapi (WhatsApp Integration)
-1. Go to https://www.whapi.cloud/
+#### Wasenderapi (WhatsApp Integration)
+1. Go to https://wasenderapi.com/
 2. Create an account and get your API key
 3. Copy to `.env.local` (optional if not using WhatsApp integration)
 
@@ -136,7 +136,7 @@ OPENAI_API_KEY=sk-your_openai_key_here
 OPENROUTER_API_KEY=your_openrouter_key_here
 
 # WhatsApp Integration (Optional)
-WHAPI_API_KEY=your_whapi_key_here
+WASENDERAPI_API_KEY=your_wasenderapi_key_here
 ```
 
 **Important**: Never commit `.env.local` to version control!
