@@ -196,9 +196,11 @@ Once the server is running and configured locally, you can test the Health Chatb
 ### Production Bot
 To test the production bot that's currently live, send a WhatsApp message to:
 
-**[PRODUCTION_BOT_NUMBER_PLACEHOLDER]**
+**+23233482361** 
 
 The production instance is running with optimized settings and ingested healthcare documents. You can ask any health-related questions and receive AI-powered responses based on the knowledge base.
+
+##Note: This temporary
 
 ## Security
 
