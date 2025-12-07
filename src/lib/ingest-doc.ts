@@ -29,4 +29,4 @@ async function ingestDocx(filepath:string){
 }
 
 
-ingestDocx("src/data/health_rag_1000_qa.docx")
+ingestDocx("src/data/health_rag_5000_additional.docx")
