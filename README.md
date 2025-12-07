@@ -200,7 +200,7 @@ To test the production bot that's currently live, send a WhatsApp message to:
 
 The production instance is running with optimized settings and ingested healthcare documents. You can ask any health-related questions and receive AI-powered responses based on the knowledge base.
 
-##Note: This temporary
+ **## Note**: This temporary
 
 ## Security
 
